@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4</title>
+  </head>
+  <body>
+    <input type="text" name="name" id="name" />
+    <input type="text" name="class" id="class" />
+    <button id="goBtn" onclick="gotoUrl()">Go</button>
+    <script>
+      function gotoUrl() {
+        var name_data = document.getElementById("name").value;
+        console.log(name_data);
+        var class_data = document.getElementById("class").value;
+        console.log(class_data);
+        var url = window.location.href;
+        console.log(url);
+        var newUrl = `${url}/${name_data}/${class_data}`;
+        console.log(newUrl);
+        window.location.href = newUrl;
+      }
+    </script>
+  </body>
+</html>
